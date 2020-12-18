@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel='stylesheet' href='style.css'/>
+    <link rel='icon' href='https://tse2.mm.bing.net/th?id=OIP.7vhIgG2vdFlKVA9ofwh05wHaHa&pid=Api' />
+</head>
+<body>
+    <header class='mb-3'>
+        <h1>Weather App</h1>
+    </header>
+    <div id='output' class='container'>
+        <div class='p-2'>
+            <p id='name' class=''></p>
+            <p id='temp' class=''></p>
+            <p id='main' class=''></p>
+        </div>
+        <div class='p-2'>
+            <p id='feels_like' class=''></p>
+            <p id='humidity' class=''></p>
+            <p id='wind' class=''></p>
+        </div>
+    </div>
+    <div class='container'>
+        <form name='dataForm' onsubmit="processForm(); return false;">
+            <label for='location' class='form-label'>Location</label>
+            <input type='text' name='location' id='location'  class='form-control' required/><br>
+            <div class='form-check'>
+                <label for='celsius' class='form-check-label'>Celsius</label>
+                <input type='radio' name='unit' id='celsius' value='celsius' class='form-check-input'/><br>
+                <label for='fahrenheit' class='form-check-label'>Fahrenheit</label>
+                <input type='radio' name='unit' id='fahrenheit' class='form-check-input' value='fahrenheit'/><br>
+            </div>
+                <input type='submit' name='submit' class='btn btn-light' />
+        </form>
+        <br>
+    </div>
+<script src='script.js'></script>
+</body>
+</html>
