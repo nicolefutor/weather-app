@@ -2,7 +2,7 @@ const output = document.querySelector("#output");
 async function getData(location, units) {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=40b3120ab87ca706d45e437d4ec5bee3&units=${units}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&APPID=40b3120ab87ca706d45e437d4ec5bee3&units=${units}`
     );
     let data = await response.json();
     data = processData(data);
